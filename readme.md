@@ -33,7 +33,7 @@ Note that you'll need to update your `Gruntfile.js`. If you're using Karma throu
 
 * `--test-framework=[framework]`
 
-  Defaults to `mocha`. Can be switched for another supported testing framework like `jasmine` or `qunit`.
+  Defaults to `mocha`. Can be switched for another supported testing framework like `jasmine` or `qunit`. The entry "requirejs" is included by default and cannot be changed unless you manually edit the generated configration files once they are created.
 
 * `--coffee`
 
