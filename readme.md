@@ -1,6 +1,6 @@
-# Karma generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-karma.png?branch=master)](http://travis-ci.org/yeoman/generator-karma)
+# Karma generator - DO NOT USE - NOT READY YET!
 
-Maintainer: [Brian Ford](https://github.com/btford)
+Maintainer: [Aaron Allport](https://github.com/aaronallport)
 
 See the [Karma documentation](http://karma-runner.github.com/) for more info.
 
@@ -11,14 +11,18 @@ Karma runs the tests in the browser, but reports them in the CLI. This greatly i
 
 PhantomJS is a great option too, but it has the one drawback that it won't expose browser inconsistencies.
 
+## Why generator-karma-require?
+
+I needed Karma configuration that plays nicely with RequireJS, that I could spin up automatically after running another RequireJS-based generator. This is designed to address that problem.
+
 
 ## Usage
 
-Install it globally `npm install -g generator-karma`.
+Install it globally `npm install -g generator-karma-require`.
 
-Running `yo karma` will generate two files for your project: `karma.conf.js` and `karma-e2e.conf.js`. It will then install the npm dependencies.
+Running `yo karma-require` will generate two files for your project: `karma.conf.js` and `karma-e2e.conf.js`. It will then install the npm dependencies.
 
-Note that you'll need to update your `Gruntfile.js`. If you're using Karma through the [AngularJS generator](https://github.com/yeoman/generator-angular), all of the configuration is done for you.
+Note that you'll need to update your `Gruntfile.js`. If you're using Karma through the [AngularJS-RequireJS generator](https://github.com/aaronallport/generator-angular-require), all of the configuration is done for you.
 
 
 ## Options
