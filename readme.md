@@ -1,4 +1,4 @@
-# Karma generator - DO NOT USE - NOT READY YET!
+# RequireJS-based Karma generator - DO NOT USE - NOT READY YET!
 
 Maintainer: [Aaron Allport](https://github.com/aaronallport)
 
