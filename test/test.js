@@ -14,7 +14,7 @@ describe('Karma generator test', function () {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('karma:app', [
+      this.app = helpers.createGenerator('karma-require:app', [
         '../../lib/generators/app'
       ]);
       done();
