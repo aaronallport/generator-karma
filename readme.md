@@ -1,4 +1,4 @@
-# RequireJS-based Karma generator - DO NOT USE - NOT READY YET!
+# RequireJS-based Karma generator [![Build Status](https://travis-ci.org/aaronallport/generator-karma-require.png?branch=master)](https://travis-ci.org/aaronallport/generator-karma-require)
 
 Maintainer: [Aaron Allport](https://github.com/aaronallport)
 
