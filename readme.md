@@ -57,3 +57,6 @@ See the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contrib
 ## License
 
 [BSD license](http://opensource.org/licenses/bsd-license.php)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/aaronallport/generator-karma-require/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
