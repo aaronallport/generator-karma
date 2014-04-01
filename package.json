@@ -1,6 +1,6 @@
 {
   "name": "generator-karma-require",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Yeoman generator for Karma using RequireJS",
   "keywords": [
     "yeoman-generator",
