@@ -18,7 +18,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        <%= templateArray(configFiles) %>,
+        <%= templateArray(configFiles, options["files-comments"]) %>,
         // http://karma-runner.github.io/0.10/plus/requirejs.html
         '<%= testPath %>/test-main.js'
     ],
