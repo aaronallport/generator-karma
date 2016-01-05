@@ -2,14 +2,11 @@
 
 See the [Karma documentation](http://karma-runner.github.com/) for more info.
 
-
 ## Why Karma?
 
 Karma runs the tests in the browser, but reports them in the CLI. This greatly improves your workflow by giving you constant, accurate feedback on the status of your tests.
 
 PhantomJS is a great option too, but it has the one drawback that it won't expose browser inconsistencies.
-
-
 
 * `--files-comments` Type: String, Default: ''
  +
@@ -18,7 +15,6 @@ PhantomJS is a great option too, but it has the one drawback that it won't expos
 ## Why generator-karma-require?
 
 I needed Karma configuration that plays nicely with RequireJS, that I could spin up automatically after running another RequireJS-based generator. This is designed to address that problem.
-
 
 ## Usage
 
@@ -30,14 +26,13 @@ By default, running `yo karma` will generate a pretty boring (and almost useless
 
 Note that you'll need to update your `Gruntfile.js` if you don't specify the `--gruntfile-path` option
 
-
 ## Options
 
 There are a lot of options going on here. None of them are required and most are probably only useful when used with other generators calling this one.
 
 Options are specified after `yo karma`. Example:
 
-`yo karma --skip-install --test-framework=jasmine --app-files='app/**/*.js,public/**/*.js'`
+`yo karma --skip-install --frameworks=jasmine --app-files='app/**/*.js,public/**/*.js'`
 
 The full list:
 
@@ -49,9 +44,9 @@ The full list:
 
  Use CoffeeScript instead of JavaScript.
 
-* `--test-framework` Type: String, Default: 'jasmine'
+* `--frameworks` Type: String, Default: 'jasmine'
 
- Specifies which testing framework to use.
+ Specifies which testing frameworks to use (CSV list). Example `--frameworks=mocha,chai,requirejs,sinon`
 
 * `--browsers` Type: String, Default: 'PhantomJS'
 
@@ -113,20 +108,16 @@ The full list:
 
  Path where the config files should be written to. This is where the `karma.conf.js` file will be placed.
 
-
 ## Configuration
 
 Karma can be configured by editing `karma.conf.js`. See the documentation page on the [config file](http://karma-runner.github.com/0.12/config/configuration-file.html) for an exhaustive list of options.
-
 
 ## Contribute
 
 See the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md)
 
-
 ## License
 
 [BSD license](http://opensource.org/licenses/bsd-license.php)
-
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/aaronallport/generator-karma-require/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

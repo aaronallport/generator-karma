@@ -14,7 +14,9 @@ module.exports = function(config) {
     basePath: '<%= options["base-path"] %>',
 
     // testing framework to use (jasmine/mocha/qunit/...)
-    frameworks: ['<%= options["test-framework"] %>', 'requirejs'],
+    // as well as any additional frameworks (requirejs/chai/sinon/...)
+    // requirejs added automatically
+    frameworks: [<%= templateArray(frameworks) %>],
 
     // list of files / patterns to load in the browser
     files: [
