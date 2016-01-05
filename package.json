@@ -28,7 +28,7 @@
   "dependencies": {
     "underscore": "^1.6.0",
     "sorted-object": "~1.0.0",
-    "yeoman-generator": "^0.17.1"
+    "yeoman-generator": "^0.19.1"
   },
   "devDependencies": {
     "mocha": "*",

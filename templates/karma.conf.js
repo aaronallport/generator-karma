@@ -11,7 +11,7 @@ module.exports = function(config) {
     autoWatch: true,
 
     // base path, that will be used to resolve files and exclude
-    basePath: '<%= options["base-path"] %>',
+    basePath: '<%= basePath %>',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     // as well as any additional frameworks (requirejs/chai/sinon/...)
@@ -20,16 +20,16 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        <%= templateArray(configFiles, options["files-comments"]) %>,
+        <%= templateArray(configFiles, fileComments) %>,
         // http://karma-runner.github.io/0.10/plus/requirejs.html
         '<%= testPath %>/test-main.js'
     ],
 
     // list of files / patterns to exclude
-    exclude: [],
+    exclude: [<%= templateArray(exclude) %>],
 
     // web server port
-    port: <%= options['web-port'] %>,
+    port: <%= port %>,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -39,10 +39,10 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: [<%= templateArray(options.browsers) %>],
+    browsers: [<%= templateArray(browsers) %>],
 
     // Which plugins to enable
-    plugins: [<%= templateArray(options.plugins) %>],
+    plugins: [<%= templateArray(plugins) %>],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
