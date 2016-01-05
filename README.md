@@ -1,4 +1,4 @@
-# RequireJS-based Karma generator [![Build Status](https://travis-ci.org/aaronallport/generator-karma-require.png?branch=master)](https://travis-ci.org/aaronallport/generator-karma-require)
+# RequireJS-based Karma generator [![Build Status](https://travis-ci.org/aaronallport/generator-karma-require.svg?branch=master)](https://travis-ci.org/aaronallport/generator-karma-require)
 
 Maintainer: [Aaron Allport](https://github.com/aaronallport)
 
@@ -42,8 +42,8 @@ Note that you'll need to update your `Gruntfile.js`. If you're using Karma throu
 * `--travis`
 
   Enable [Travis CI](https://travis-ci.org/) config generation.
-  
-  
+
+
 ## Configuration
 
 Karma can be configured by editing `karma.conf.js`. See the documentation page on the [config file](http://karma-runner.github.com/0.10/config/configuration-file.html) for an exhaustive list of options.
@@ -60,4 +60,3 @@ See the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contrib
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/aaronallport/generator-karma-require/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
