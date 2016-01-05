@@ -12,7 +12,7 @@ describe('Karma generator creation test', function () {
     var gen;
     beforeEach(function(done) {
       gen = helpers.run(join(__dirname, '../app'))
-      gen.inTmpDir(function (dir) {
+      gen.inTmpDir(function () {
         done();
       });
     });
@@ -75,11 +75,11 @@ describe('Karma generator creation test', function () {
         gen.withOptions({travis: true})
           .on('end', function () {
             gen.generator.log.error = gen.generator.log.__olderror;
-          assert.file(['.travis.yml']);
-          assert(
-            logMessage.indexOf('Could not open package.json for reading.') > -1
-          );
-          done();
+            assert.file(['.travis.yml']);
+            assert(
+              logMessage.indexOf('Could not open package.json for reading.') > -1
+            );
+            done();
         });
     });
   });
@@ -88,7 +88,7 @@ describe('Karma generator creation test', function () {
     helpers
       .run(join(__dirname, '../app'))
       .withOptions({travis: true, force: true})
-      .inTmpDir(function (dir){
+      .inTmpDir(function (dir) {
         require('fs').writeFileSync(join(dir,'package.json'), '{}');
       })
       .on('end', function () {
@@ -102,7 +102,7 @@ describe('Karma generator creation test', function () {
     helpers
       .run(join(__dirname, '../app'))
       .withOptions({travis: true, force: true})
-      .inTmpDir(function (dir){
+      .inTmpDir(function (dir) {
         require('fs').writeFileSync(join(dir,'package.json'), '{"dependencies":{"grunt":"1.0.0"}}');
       })
       .on('end', function () {

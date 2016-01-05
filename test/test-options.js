@@ -1,4 +1,4 @@
-/*global describe, beforeEach, it */
+/*global describe, it */
 'use strict';
 
 var path = require('path');
@@ -10,15 +10,15 @@ describe('Karma generator options test', function () {
     var config = {
       'base-path': 'new base-path',
       'web-port': 80,
-      'frameworks': 'mocha,chai,sinon,requirejs',
-      'browsers': 'Chrome,PhantomJS,Firefox',
+      frameworks: 'mocha,chai,sinon,requirejs',
+      browsers: 'Chrome,PhantomJS,Firefox',
       'app-files': 'public/**/*.js,apps/*.js',
       'files-comments': 'bower:js,endbower',
       'bower-components': 'jQuery',
       'bower-components-path': 'app',
       'test-files': 'tests/spec/*.js',
       'exclude-files': 'exclude/files.js',
-      'plugins': 'qunit,jazzy',
+      plugins: 'qunit,jazzy',
       'template-path': '../test',
       'config-path': 'testing',
       'config-file': 'config.mock.json'
@@ -28,11 +28,12 @@ describe('Karma generator options test', function () {
       .inDir(path.join(__dirname, 'temp'))
       .withOptions(config)
       .on('end', function () {
+        var frameworks = config.frameworks.split(',');
         var test = require(path.resolve(
           config['config-path'],
           config['config-file']
         ));
-        var frameworks = config.frameworks.split(',');
+
         assert.equal(config['base-path'], test['base-path']);
         assert.deepEqual(frameworks, test.frameworks);
         assert.equal(config['web-port'], test.port);
@@ -41,10 +42,10 @@ describe('Karma generator options test', function () {
         assert.deepEqual(
           [].concat(
             config.plugins.split(','),
-            config.browsers.split(',').map(function(browser) {
+            config.browsers.split(',').map(function (browser) {
               return 'karma-' + browser.toLowerCase() + '-launcher';
             }),
-            frameworks.map(function(framework) {
+            frameworks.map(function (framework) {
               return 'karma-' + framework.toLowerCase();
             })
           ),
@@ -52,7 +53,7 @@ describe('Karma generator options test', function () {
         );
         assert.deepEqual(
           [].concat(
-            config['bower-components'].split(',').map(function(component) {
+            config['bower-components'].split(',').map(function (component) {
               return [
                 config['bower-components-path'],
                 '/',
@@ -64,6 +65,7 @@ describe('Karma generator options test', function () {
           ),
           test.files
         );
+        
         done();
       });
   });
