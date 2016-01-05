@@ -5,7 +5,7 @@ var sortedObject = require('sorted-object');
 var yeoman = require('yeoman-generator');
 var _ = require('underscore');
 
-module.exports = yeoman.generators.Base.extend({
+module.exports = yeoman.Base.extend({
   initializing: function () {
     function arrayFromString(str) {
       return str.split(',').filter(function (check) {
@@ -196,20 +196,26 @@ module.exports = yeoman.generators.Base.extend({
           port: this.options['web-port'],
           browsers: this.options.browsers,
           plugins: this.options.plugins,
+          testPath: this.options['base-path'] + "/test",
           templateArray: function (files, comments, coffee) {
             var str = [];
+
             _.each(comments, function (comment) {
               str.push('\n      ' + (coffee ? '# ' : '// ') + comment);
             });
+
             _.uniq(files).forEach(function (item, index) {
               str.push('\n      \"' + item + '\"');
+
               if (index + 1 !== files.length) {
                 if (!coffee) {
                   str.push(',');
                 }
               }
             });
+
             str.push('\n    ');
+
             return str.join('');
           }
         }

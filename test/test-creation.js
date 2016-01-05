@@ -1,10 +1,9 @@
 /*global describe, beforeEach, it */
 'use strict';
 
-var helpers = require('yeoman-generator').test;
 var join = require('path').join;
-var assert = require('yeoman-generator').assert;
-var helpers = require('yeoman-generator').test;
+var assert = require('yeoman-assert');
+var helpers = require('yeoman-test');
 var join = require('path').join;
 
 describe('Karma generator creation test', function () {
@@ -80,7 +79,8 @@ describe('Karma generator creation test', function () {
               logMessage.indexOf('Could not open package.json for reading.') > -1
             );
             done();
-        });
+          });
+      });
     });
   });
 
