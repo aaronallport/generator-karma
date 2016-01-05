@@ -186,6 +186,8 @@ module.exports = yeoman.generators.Base.extend({
       return;
     }
 
+    this.gruntfile.loadNpmTasks('grunt-karma');
+    
     this.gruntfile.insertConfig(
       'karma',
       JSON.stringify({
