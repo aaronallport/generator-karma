@@ -8,10 +8,6 @@ Karma runs the tests in the browser, but reports them in the CLI. This greatly i
 
 PhantomJS is a great option too, but it has the one drawback that it won't expose browser inconsistencies.
 
-* `--files-comments` Type: String, Default: ''
-
- List of comments to add to files properties. It can be used to support bower dependencies wiring using [wiredep](https://github.com/taptapship/wiredep).
-
 ## Why generator-karma-require?
 
 I needed Karma configuration that plays nicely with RequireJS, that I could spin up automatically after running another RequireJS-based generator. This is designed to address that problem.
