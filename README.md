@@ -1,4 +1,4 @@
-# RequireJS-based Karma generator [![Build Status](https://travis-ci.org/aaronallport/generator-karma-require.svg?branch=master)](https://travis-ci.org/aaronallport/generator-karma-require)
+# ARCHIVED RequireJS-based Karma generator [![Build Status](https://travis-ci.org/aaronallport/generator-karma-require.svg?branch=master)](https://travis-ci.org/aaronallport/generator-karma-require)
 
 See the [Karma documentation](http://karma-runner.github.com/) for more info.
 
